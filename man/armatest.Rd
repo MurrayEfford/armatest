@@ -11,28 +11,33 @@ Test only
 
 \usage{
 
-armatest(N = 200, K = 100, ncores = 1, debug = FALSE)
+armatest(ncores = 1, forkonunix = TRUE, armaexp = TRUE, 
+    nrepl = 1, N = 200, K = 100,  debug = FALSE, seed = 123)
 
 }
 
 \arguments{
 
+  \item{ncores}{integer cluster size}
+  \item{forkonunix}{logical}
+  \item{armaexp}{logical; use arma::exp or std::exp in C++}
+  \item{nrepl}{integer number of replicates}
   \item{N}{nrows}
   \item{K}{ncols}
-  \item{ncores}{integer cluster size}
   \item{debug}{logical}
+  \item{seed}{integer}
 
 }
 
 \details{
 
-None yet
+Test of RcppArmadillo element-wise exp.
 
 }
 
 \value{
 
-Logical (TRUE if all exp positive)
+Vector of min, max and mean of simulated exp(-distance).
 
 }
 

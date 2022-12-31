@@ -2,6 +2,8 @@ import (parallel)
 
 importFrom (Rcpp, evalCpp)
 
+importFrom (stats, runif)
+
 export(armatest)
 
 useDynLib (armatest, .registration = TRUE)

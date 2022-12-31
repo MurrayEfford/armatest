@@ -20,10 +20,9 @@ armatest <- function (ncores = 1, forkonunix = TRUE, armaexp = TRUE,
         message (paste0('Using single processor (ncores = ', ncores, ')'))
         set.seed(seed)
     }
-    detpar <- matrix(c(0.2, 20), nrow = N, ncol = 2, byrow = TRUE)
     one <- function (r) {
-        d <- matrix(runif(N*K)*100, N, K)
-        at <- armatestcpp(d, detpar, armaexp)
+        d <- matrix(runif(N*K), N, K)
+        at <- armatestcpp(d, armaexp)
         c(range(at),mean(at))
     }
     if (ncores>1)

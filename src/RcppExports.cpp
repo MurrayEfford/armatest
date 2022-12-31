@@ -12,21 +12,20 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // armatestcpp
-arma::mat armatestcpp(const arma::mat& d, const arma::mat& detpar, bool armaexp);
-RcppExport SEXP _armatest_armatestcpp(SEXP dSEXP, SEXP detparSEXP, SEXP armaexpSEXP) {
+arma::mat armatestcpp(const arma::mat& d, bool armaexp);
+RcppExport SEXP _armatest_armatestcpp(SEXP dSEXP, SEXP armaexpSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type d(dSEXP);
-    Rcpp::traits::input_parameter< const arma::mat& >::type detpar(detparSEXP);
     Rcpp::traits::input_parameter< bool >::type armaexp(armaexpSEXP);
-    rcpp_result_gen = Rcpp::wrap(armatestcpp(d, detpar, armaexp));
+    rcpp_result_gen = Rcpp::wrap(armatestcpp(d, armaexp));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_armatest_armatestcpp", (DL_FUNC) &_armatest_armatestcpp, 3},
+    {"_armatest_armatestcpp", (DL_FUNC) &_armatest_armatestcpp, 2},
     {NULL, NULL, 0}
 };
 
