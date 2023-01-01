@@ -1,6 +1,7 @@
 # armatest
 
-R package to demonstrate issue in RcppArmadillo with element-wise arma::exp()
+R package to demonstrate issue in RcppArmadillo with element-wise arma::exp() 
+when used with parallel FORK clusters on Unix after non-parallel call.
 
 May be install with --
 
@@ -10,9 +11,9 @@ Running on Unix --
 
 library(armatest)
 
-armatest(2)   # OK
+armatest(2)                      # OK, 2 workers
 
-armatest(1)   # OK
+armatest(1)                      # OK, 1 worker
 
 armatest(2)                      # hangs, may be interrupted with ctrl-c
 
