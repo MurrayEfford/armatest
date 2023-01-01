@@ -3,7 +3,7 @@
 R package to demonstrate issue in RcppArmadillo with element-wise arma::exp() 
 when used with parallel FORK clusters on Unix after non-parallel call.
 
-May be install with --
+May be installed with --
 
 devtools::install_github("MurrayEfford/armatest")
 
