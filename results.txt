@@ -85,3 +85,4 @@ other attached packages:
 loaded via a namespace (and not attached):
 [1] compiler_4.2.1 parallel_4.2.1 tools_4.2.1    Rcpp_1.0.9
 
+## same problem using Rscript, so not a GUI issue
